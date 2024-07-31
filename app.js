@@ -28,10 +28,4 @@ while (choose != secretNumber) {
     }
 
     attempts++;
-
 }
-
-
-
-
-
