@@ -3,7 +3,7 @@ alert('Welcome to the game from secret number');
 //GERADOR DE NUMEROS ALEATORIOS DO TIPO INTEIRO
 let secretNumber = parseInt(Math.random() * 100 + 1);
 
-//PARA ACIONAR UM POP-UP COM CAIXA DE MENSAGEM E GUARDAR O VALOR EM UMA VARIAVEL
+
 let choose;
 
 //CONTADOR DE TENTATIVAS
