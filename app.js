@@ -1,7 +1,9 @@
 alert('Welcome to the game from secret number');
 
+let maxNumber = 1000;
+
 //GERADOR DE NUMEROS ALEATORIOS DO TIPO INTEIRO
-let secretNumber = parseInt(Math.random() * 100 + 1);
+let secretNumber = parseInt(Math.random() * maxNumber + 1);
 
 
 let choose;
@@ -10,7 +12,7 @@ let choose;
 let attempts = 1; 
 
 while (choose != secretNumber) {
-    choose = prompt ('Choose a number between 1 and 100');
+    choose = prompt (`Choose a number between 1 and ${maxNumber}`);
 
     if (choose == secretNumber){
         break;
