@@ -1,7 +1,7 @@
 alert('Welcome to the game from secret number');
 
-//PARA CRIAÇÕES DE VARIÁVEIS
-let secretNumber = 10;
+//GERADOR DE NUMEROS ALEATORIOS DO TIPO INTEIRO
+let secretNumber = parseInt(Math.random() * 100 + 1);
 
 //PARA ACIONAR UM POP-UP COM CAIXA DE MENSAGEM E GUARDAR O VALOR EM UMA VARIAVEL
 let choose;
@@ -9,14 +9,11 @@ let choose;
 //CONTADOR DE TENTATIVAS
 let attempts = 1; 
 
-
 while (choose != secretNumber) {
-    choose = prompt ('Choose a number between 1 and 10');
+    choose = prompt ('Choose a number between 1 and 100');
 
     if (choose == secretNumber){
-        console.log(`You guessed the secret number ${secretNumber} with ${attempts} attempts`);
-        /*O USO DA CRASE (TEMPLATE STRINGS) ONDE É POSSÍVEL INSERIR VARIÁVEIS
-          DENTRO DE UMA TEMPLATE STRING SEM PRECISAR CONCATENAR MANUALMENTE*/
+        break;
     }
     
     else if (choose > secretNumber ) {
@@ -29,3 +26,7 @@ while (choose != secretNumber) {
 
     attempts++;
 }
+
+//OPERADOR TERNÁRIO
+let chooseWord = attempts > 1 ? "attempts" : "attempt";
+console.log(alert(`You guessed the secret number ${secretNumber} with ${attempts} ${chooseWord}`));
